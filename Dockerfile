@@ -1,6 +1,5 @@
 
 
-
-FROM openjdk:11
-COPY target/stationSki-1.1.0.jar stationSki-1.1.0.jar
-ENTRYPOINT ["java","-jar","/stationSki-1.1.0.jar"]
+FROM openjdk:8
+ADD target/gestion-station-ski-1.0.jar gestion-station-ski-1.0.jar
+ENTRYPOINT ["java","-jar","gestion-station-ski-1.0.jar"]
