@@ -1,5 +1,4 @@
 
-
-FROM openjdk:8
-ADD target/gestion-station-ski-1.0.jar gestion-station-ski-1.0.jar
-ENTRYPOINT ["java","-jar","gestion-station-ski-1.0.jar"]
+FROM adoptopenjdk/openjdk11
+COPY target/docker-spring-boot.jar docker-spring-boot.jar
+ENTRYPOINT ["java","-jar","/docker-spring-boot.jar"]
